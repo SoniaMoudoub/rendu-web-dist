@@ -1,0 +1,52 @@
+<fieldset>
+  <legend>Customer</legend>
+<div>
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input [(ngModel)]="customer.name" id="name" type="text" />
+  </div>
+  <br>
+  <div>
+    <label for="bag">
+      Bag
+    </label>
+    <input [(ngModel)]="customer.bag" id="bag" type="number" />
+  </div>
+  <br>
+  <div>
+    <label for="category">
+      Category
+    </label>
+    <input [(ngModel)]="customer.category" type="radio" value='Student' formCont>Student
+    <input [(ngModel)]="customer.category" type="radio" value='Other'>Other
+  </div>
+
+  <br>
+  <div>
+    <button (click)="addCustomer()">Add a customer</button>
+  </div>
+</div>
+</fieldset>
+
+<br>
+<h2>Customers:</h2> 
+
+<div >
+<table >
+      <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>BAG</th>
+          <th>CATEGORY</th>
+      </tr>
+    <tr *ngFor="let customer of customers; index as customerId">
+      <td>{{customer.id}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.bag}}</td>
+      <td>{{customer.category}}</td>
+    </tr>
+</table>
+</div>
+

@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularServices';
+   ImageBook = '../../assets/téléchargement.jpg';
+   ImageCustomer = '../../assets/customer.jpg';
+   ImagePerson = '../../assets/person.jpg';
+   ImageArticle = '../../assets/article.jpg';
+   ImageReview = '../../assets/review.jpg';
+   ImagePublishingHouse = '../../assets/publishinghouse.jpg';
+
+
+
 }

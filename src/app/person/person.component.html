@@ -1,0 +1,63 @@
+<fieldset>
+    <legend>Person</legend>
+  <div>
+    <div>
+      <label for="name">
+        Name
+      </label>
+      <input [(ngModel)]="person.name" id="name" type="text" />
+    </div>
+    <br>
+    <div>
+      <label for=" organization">
+        Organization
+      </label>
+      <input [(ngModel)]="person. organization" id=" organization" type="text" />
+    </div>
+    <br>
+    <div>
+        <label for="orgidcard">
+            Orgidcard
+        </label>
+        <input [(ngModel)]="person.orgidcard" id="orgidcard" type="text" />
+      </div>
+      <br>
+      <div>
+          <label for="accessfees">
+            Accessfees
+          </label>
+          <input [(ngModel)]="person.accessfees" id="accessfees" type="text" />
+        </div>
+        <br>
+        
+    <div>
+      <button (click)="addPerson()">Add a Person</button>
+    </div>
+  </div>
+  </fieldset>
+  
+  <br>
+  <h2>Persons:</h2> 
+  
+  <div >
+  <table >
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>ORGANIZATION</th>
+            <th>ORGIDCARD</th>
+            <th>ACCESSFEES</th>
+         
+        </tr>
+      <tr *ngFor="let person of persons">
+        <td>{{person.id}}</td>
+        <td>{{person.name}}</td>
+        <td>{{person.organization}}</td>
+        <td>{{person.orgidcard}}</td>
+        <td>{{person.accessfees}}</td>
+ 
+      </tr>
+  </table>
+  </div>
+  
+  

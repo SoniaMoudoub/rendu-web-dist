@@ -1,0 +1,36 @@
+p {
+    font-family: Lato;
+  }
+.column {
+  float: left;
+  width: 25.33%;
+  padding: 3px;
+   margin-top: 50px;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+ 
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+label{
+  font: italic small-caps bold 12px/30px Georgia, serif;
+    font-size: 150%;
+}
+.row{
+  margin-left: 220px;
+ 
+}
+img{
+  height:"80";
+   width:"80";
+  
+}

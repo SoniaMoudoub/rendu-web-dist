@@ -1,0 +1,44 @@
+<fieldset>
+    <legend>Publishing House</legend>
+  <div>
+    <div>
+      <label for="name">
+        Name
+      </label>
+      <input [(ngModel)]="publishinghouse.name" id="name" type="text" />
+    </div>
+    <br>
+    <div>
+        <label for="address">
+          Address
+        </label>
+        <input [(ngModel)]="publishinghouse.address" id="address" type="text" />
+      </div>
+      <br>
+    <div>
+      <button (click)="addPublishingHouse()">Add a publishing house</button>
+    </div>
+  </div>
+  </fieldset>
+  
+  <br>
+  <h2>Publishing houses:</h2> 
+  
+  <div >
+  <table >
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>ADDRESS</th>
+        
+        </tr>
+      <tr *ngFor="let publishinghouse of publishinghouses">
+        <td>{{publishinghouse .id}}</td>
+        <td>{{publishinghouse .name}}</td>
+        <td>{{publishinghouse .address}}</td>
+  
+      </tr>
+  </table>
+  </div>
+  
+  

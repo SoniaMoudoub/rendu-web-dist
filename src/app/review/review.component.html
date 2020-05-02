@@ -1,0 +1,45 @@
+<fieldset>
+    <legend>Review</legend>
+  <div>
+    <div>
+      <label for="name">
+        Name
+      </label>
+      <input [(ngModel)]="review.name" id="name" type="text" />
+    </div>
+    <br>
+    <div>
+      <label for="number">
+        Number
+      </label>
+      <input [(ngModel)]="review.number" id="number" type="text" />
+    </div>
+    <br>
+   
+    <div>
+      <button (click)="addReview()">Add a review</button>
+    </div>
+  </div>
+  </fieldset>
+  
+  <br>
+  <h2>Reviews:</h2> 
+  
+  <div >
+  <table >
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>NUMBER</th>
+         
+        </tr>
+      <tr *ngFor="let review of reviews">
+        <td>{{review.id}}</td>
+        <td>{{review.name}}</td>
+        <td>{{review.number}}</td>
+       
+      </tr>
+  </table>
+  </div>
+  
+  

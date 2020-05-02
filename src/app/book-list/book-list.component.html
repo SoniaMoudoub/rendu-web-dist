@@ -1,0 +1,87 @@
+<fieldset>
+  <legend>Book</legend>
+<div>
+  <div>
+    <label for="cote">
+      Cote
+    </label>
+    <input [(ngModel)]="book.cote" id="cote" type="text" />
+  </div>
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input [(ngModel)]="book.name" id="name" type="text" />
+  </div>
+  <br>
+  <div>
+    <label for="availability">
+     availability
+    </label>
+    <input [(ngModel)]="book.availability" id="availability" type="number" />
+  </div>
+  <br>
+  <div>
+    <label for="description">
+       Description
+    </label>
+    <input [(ngModel)]="book.description" id=" description" type="text" />
+  </div>
+
+   <div>
+    <label for="auteur">
+       Auteur
+    </label>
+    <input [(ngModel)]="book.auteur" id="auteur" type="text" />
+  </div>
+
+  <div>
+    <label for=" url">
+       URL
+    </label>
+    <input [(ngModel)]="book.url" id="url" type="text" />
+  </div>
+   <div>
+    <label for="location">
+     Location
+    </label>
+    <input [(ngModel)]="book.location" id="location" type="text" />
+  </div>
+
+  <br>
+  <div>
+    <button (click)="addBook()">Add a book</button>
+  </div>
+</div>
+</fieldset>
+
+<br>
+<h2>Books:</h2> 
+
+<div >
+<table >
+      <tr>
+          <td>ID</td>
+          <td>COTE</td>
+          <td>NAME</td>
+          <td> availability</td>
+          <td> Description</td>
+          <td>AUTEUR</td>
+          <td>URL</td>
+          <td>Location</td>
+
+      </tr>
+    <tr *ngFor="let book of books; index as bookId">
+      <td>{{book.id}}</td>
+      <td>{{book.cote}}</td>
+      <td>{{book.name}}</td>
+      <td>{{book.availability}}</td>
+      <td>{{book.description}}</td>
+      <td>{{book.auteur}}</td>
+      <td>{{book.url}}</td>
+      <td>{{book.location}}</td>
+    </tr>
+</table>
+</div>
+
+

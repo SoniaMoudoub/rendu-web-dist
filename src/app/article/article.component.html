@@ -1,0 +1,70 @@
+<fieldset>
+    <legend>Article</legend>
+  <div>
+    <div>
+      <label for="name">
+        Name
+      </label>
+      <input [(ngModel)]="article.name" id="name" type="text" />
+    </div>
+    <br>
+    <div>
+        <label for="auteur">
+          Auteur
+        </label>
+        <input [(ngModel)]="article.auteur" id="auteur" type="text" />
+      </div>
+      <br>
+      <div>
+          <label for="university">
+            University
+          </label>
+          <input [(ngModel)]="article.university" id="university" type="text" />
+        </div>
+        <br>
+        <div>
+            <label for="availability">
+              Availability
+            </label>
+            <input [(ngModel)]="article.availability" id="availability" type="text" />
+          </div>
+          <br>
+          <div>
+              <label for="description">
+                Description
+              </label>
+              <input [(ngModel)]="article.description" id="description" type="text" />
+            </div>
+  
+    <br>
+    <div>
+      <button (click)="addArticle()">Add an article</button>
+    </div>
+  </div>
+  </fieldset>
+  
+  <br>
+  <h2>Articles:</h2> 
+  
+  <div >
+  <table >
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>AUTEUR</th>
+            <th>Availability</th>
+            <th>Description</th>
+            <th>University</th>
+        </tr>
+      <tr *ngFor="let article of articles">
+        <td>{{article.id}}</td>
+        <td>{{article.name}}</td>
+        <td>{{article.auteur}}</td>
+        <td>{{article.availability}}</td>
+        <td>{{article.description}}</td>
+        <td>{{article.university}}</td>
+      </tr>
+  </table>
+  </div>
+  
+  
